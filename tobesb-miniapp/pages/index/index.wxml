@@ -1,0 +1,29 @@
+<view class="app">
+    <view class="main">
+        <view class="date-detail">
+            <view class="week-date">
+                <text class="week">{{tgDaily.week}}</text>
+                <text class="date">{{tgDaily.date}}</text>
+            </view>
+            <view class="weather">
+                <text>{{tgDaily.weather}}</text>
+            </view>
+        </view>
+        <view class="content">{{tgDaily.content.content}}</view>
+        <view class="operation">
+            <button class="more" size="default" type="primary" bindtap="refreshBtnClick">再舔一口</button>
+        </view>
+    </view>
+
+    <view class="footer">
+        <view class="friendly-link">
+            <navigator url="/pages/contribution/contribution">投稿</navigator>
+            <navigator url="/pages/rank/rank">排行榜</navigator>
+            <navigator style="padding-right: 0;">客服👉</navigator>
+            <button class="toCustomServiceBtn" open-type="contact">
+                <mp-icon type="field" icon="comment" color="#8a8a8a" size="{{18}}"></mp-icon>
+            </button>
+        </view>
+        <view class="copy-right">Copyright @ 2020 https://tiangou.alpha2j.cn</view>
+    </view>
+</view>

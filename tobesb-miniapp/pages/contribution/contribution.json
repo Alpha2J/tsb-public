@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "mp-icon": "/miniprogram_npm/weui-miniprogram/icon/icon"
+  },
+  "navigationBarBackgroundColor": "#515BCE",
+  "navigationBarTitleText": "投稿"
+}

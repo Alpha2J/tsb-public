@@ -1,0 +1,34 @@
+<view class="app">
+    <view class="main">
+        <form bindsubmit="confirmBtnClick">
+            <view class="content-container">
+                <input value="{{contributionOpenId}}" name="openId" hidden="{{true}}"></input>
+                <textarea class="content" auto-height maxlength="400" placeholder="请在此输入投稿内容, 400字以内" name="content"/>
+            </view>
+
+            <view class="audit-container">
+                <view class="audit-alert-text">
+                    接收审核通知
+                    <switch checked="{{receiveAuditChecked}}" bindchange="receiveAuditSwitchChange" name="receiveSubMessage"></switch>
+                </view>
+                <view wx:if="{{isAuthenticated}}">
+                    <button class="audit-confirm-btn" size="mini" type="primary" form-type="submit" >提交投稿</button>
+                </view>
+                <view wx:else>
+                    <button open-type="getUserInfo" bindgetuserinfo="authorizedUserInfoCallback" class="audit-confirm-btn" size="mini" type="primary">提交投稿</button>
+                </view>
+            </view>
+        </form>
+    </view>
+
+    <view class="footer">
+        <view class="friendly-link">
+            <navigator url="/pages/rank/rank">排行榜</navigator>
+            <navigator style="padding-right: 0;">客服👉</navigator>
+            <button class="toCustomServiceBtn" open-type="contact">
+                <mp-icon type="field" icon="comment" color="#8a8a8a" size="{{18}}"></mp-icon>
+            </button>
+        </view>
+        <view class="copy-right">Copyright @ 2020 https://tiangou.alpha2j.cn</view>
+    </view>
+</view>

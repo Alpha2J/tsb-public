@@ -1,0 +1,38 @@
+<view class="app">
+    <view class="main">
+        <view class="content-container">
+            <view class="content-item" wx:for="{{contents}}">
+                <view class="content">
+                    {{item.content}}
+                </view>
+                <view class="content-operation">
+                    <view wx:if="{{isAuthenticated}}">
+<!--                        已授权直接显示-->
+<!--                        data-item的作用为: 点击该button后, likeIconClick里面能拿到这个item的引用, 如果不写则拿不到-->
+                        <button bindtap="onLikeIconClick" data-item="{{item}}">
+                            <mp-icon class="content-operation-icon" type="{{item.liked?'field':'outline'}}" icon="like" color="{{item.liked?'#EF5451':'#8A8A8A'}}" size="{{18}}"></mp-icon>
+                        </button>
+                    </view>
+                    <view wx:else>
+                        <button open-type="getUserInfo" bindgetuserinfo="authorizeUserInfoCallback">
+                            <mp-icon class="content-operation-icon" type="{{item.liked?'field':'outline'}}" icon="like" color="{{item.liked?'#EF5451':'#8A8A8A'}}" size="{{18}}"></mp-icon>
+                        </button>
+                    </view>
+                    <button bindtap="onCopyIconClick" data-item="{{item}}">
+                        <mp-icon class="content-operation-icon" type="outline" icon="copy" color="#8a8a8a" size="{{18}}"></mp-icon>
+                    </button>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="footer">
+        <view class="friendly-link">
+            <navigator url="/pages/contribution/contribution">投稿</navigator>
+            <navigator style="padding-right: 0;">客服👉</navigator>
+            <button class="toCustomServiceBtn" open-type="contact">
+                <mp-icon type="field" icon="comment" color="#8a8a8a" size="{{18}}"></mp-icon>
+            </button>
+        </view>
+        <view class="copy-right">Copyright @ 2020 https://tiangou.alpha2j.cn</view>
+    </view>
+</view>

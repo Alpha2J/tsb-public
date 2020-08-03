@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "mp-icon": "/miniprogram_npm/weui-miniprogram/icon/icon"
+  },
+  "navigationBarBackgroundColor": "#469780",
+  "navigationBarTitleText": "排行榜"
+}

@@ -1,0 +1,22 @@
+{
+  "name": "tobesb-miniapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alpha2J/tobesb-miniapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alpha2J/tobesb-miniapp/issues"
+  },
+  "homepage": "https://github.com/Alpha2J/tobesb-miniapp#readme",
+  "dependencies": {
+    "moment": "^2.26.0"
+  }
+}
